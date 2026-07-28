@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iván Mandayo — Ingeniero de IA</title>
 <meta name="description" content="Portfolio de Iván Mandayo Lagoa, Ingeniero de Inteligencia Artificial. Machine Learning, Visión por Computador y sistemas con LLMs.">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -360,43 +360,65 @@
       <p class="sub">Porque no todo es estar delante de una pantalla.</p>
     </header>
 
-    <div class="sport">
-      <figure class="sport-photo">
-        <img src="assets/deporte.svg" alt="Ilustración de un surfista en una ola al atardecer con un wingfoil en el horizonte">
-      </figure>
-
-      <div class="sport-text">
-        <p>
-          Soy un apasionado del deporte. Llevo <strong>toda la vida surfeando</strong> — crecer
-          en la costa gallega tiene eso — y he jugado al fútbol desde pequeño. Salgo a correr
-          siempre que puedo y ahora ando <strong>empezando con el wingfoil</strong>, que es
-          justo la fase que más me gusta: la de no tener ni idea y caerme mucho.
-        </p>
-        <p class="sport-note">
-          Del mar y del equipo se aprenden dos cosas que también sirven delante del código:
-          que la constancia gana a los arreones, y que las condiciones nunca son las ideales.
-        </p>
-
-        <ul class="sport-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M6 14c3-7 8-11 14-11 0 8-4 12-10 14"/></svg>
-            <div><strong>Surf</strong><span>Toda la vida</span></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 7 4.3 3.1-1.6 5H9.3l-1.6-5z"/><path d="M12 3v4M4.2 9.4 7.7 12M19.8 9.4 16.3 12M7.5 20.2 9.3 15.1M16.5 20.2 14.7 15.1"/></svg>
-            <div><strong>Fútbol</strong><span>Desde pequeño</span></div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="15.5" cy="4" r="2"/><path d="m8 21 2.5-6 3-2.5 1-4.5 4 3 3 .5"/><path d="m5.5 12.5 3-1.5 2-3.5 3.5-1"/><path d="M4 17h3"/></svg>
-            <div><strong>Running</strong><span>Siempre que puedo</span></div>
-          </li>
-          <li class="new">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c5-8 12-9 18-9 0 6-3 11-9 13z"/><path d="M12 16v4"/><path d="M9 20h6"/></svg>
-            <div><strong>Wingfoil</strong><span>Empezando</span></div>
-          </li>
-        </ul>
-      </div>
+    <div class="sport-text">
+      <p>
+        Soy un apasionado del deporte. Llevo <strong>toda la vida surfeando</strong> — crecer
+        en la costa gallega tiene eso — y he jugado al fútbol desde pequeño. Salgo a correr
+        siempre que puedo, en invierno cambio el agua por la nieve con el <strong>snowboard</strong>,
+        y ahora ando empezando con el <strong>wingfoil</strong>: justo la fase que más me gusta,
+        la de no tener ni idea y caerme mucho.
+      </p>
+      <p class="sport-note">
+        Del mar y del equipo se aprenden dos cosas que también sirven delante del código:
+        que la constancia gana a los arreones, y que las condiciones nunca son las ideales.
+      </p>
     </div>
+
+    <div class="sport-gallery">
+      <figure class="g-surf">
+        <img src="assets/surf.jpg" alt="Iván surfeando, girando en la pared de una ola" loading="lazy">
+        <figcaption>Surf · toda la vida</figcaption>
+      </figure>
+      <figure class="g-snow">
+        <img src="assets/snow.jpg" alt="Iván con casco y gafas de snowboard en la montaña" loading="lazy">
+        <figcaption>Snowboard</figcaption>
+      </figure>
+      <figure class="g-futbol">
+        <img src="assets/futbol.jpg" alt="Iván con la equipación de fútbol sosteniendo el balón sobre el césped del estadio" loading="lazy">
+        <figcaption>Fútbol</figcaption>
+      </figure>
+      <figure class="g-wing">
+        <img src="assets/wingfoil.jpg" alt="Iván sobre la tabla de wingfoil sujetando el ala en el mar" loading="lazy">
+        <figcaption>Wingfoil · empezando</figcaption>
+      </figure>
+      <figure class="g-ola">
+        <img src="assets/surf-ola.jpg" alt="Iván surfeando una ola con los acantilados de la costa gallega al fondo" loading="lazy">
+        <figcaption>Costa gallega</figcaption>
+      </figure>
+    </div>
+
+    <ul class="sport-list">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17c2.5 0 2.5 2 5 2s2.5-2 5-2 2.5 2 5 2 2.5-2 5-2"/><path d="M6 14c3-7 8-11 14-11 0 8-4 12-10 14"/></svg>
+        <div><strong>Surf</strong><span>Toda la vida</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 7 4.3 3.1-1.6 5H9.3l-1.6-5z"/><path d="M12 3v4M4.2 9.4 7.7 12M19.8 9.4 16.3 12M7.5 20.2 9.3 15.1M16.5 20.2 14.7 15.1"/></svg>
+        <div><strong>Fútbol</strong><span>Desde pequeño</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="15.5" cy="4" r="2"/><path d="m8 21 2.5-6 3-2.5 1-4.5 4 3 3 .5"/><path d="m5.5 12.5 3-1.5 2-3.5 3.5-1"/><path d="M4 17h3"/></svg>
+        <div><strong>Running</strong><span>Siempre que puedo</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 20 15-9"/><path d="M6.5 9.2 17 15.3"/><circle cx="17.5" cy="4.5" r="1.8"/><path d="M14 8.5 11 11l3 3"/><path d="m19 19 2-1"/><path d="M4 15.5 8 13"/></svg>
+        <div><strong>Snowboard</strong><span>En invierno</span></div>
+      </li>
+      <li class="new">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c5-8 12-9 18-9 0 6-3 11-9 13z"/><path d="M12 16v4"/><path d="M9 20h6"/></svg>
+        <div><strong>Wingfoil</strong><span>Empezando</span></div>
+      </li>
+    </ul>
   </section>
 
   <!-- ══════════════ CONTACTO ══════════════ -->

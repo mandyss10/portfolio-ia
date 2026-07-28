@@ -297,12 +297,7 @@ html[data-theme="light"] .btn-primary { color: #fff; }
 .timeline strong { color: var(--text); }
 
 /* ══════════ DEPORTE ══════════ */
-.sport { display: grid; grid-template-columns: .95fr 1.05fr; gap: 2.2rem; align-items: center; }
-.sport-photo {
-  border-radius: 20px; overflow: hidden;
-  border: 1px solid var(--border); box-shadow: var(--shadow);
-}
-.sport-photo img { width: 100%; aspect-ratio: 7 / 5.2; object-fit: cover; display: block; }
+.sport-text { max-width: 68ch; }
 .sport-text p { color: var(--muted); margin-bottom: 1rem; }
 .sport-text strong { color: var(--text); }
 .sport-note {
@@ -310,9 +305,43 @@ html[data-theme="light"] .btn-primary { color: #fff; }
   border-left: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
+/* Mosaico de fotos */
+.sport-gallery {
+  display: grid; gap: .7rem; margin-top: 2rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 145px;
+  grid-template-areas:
+    "surf surf surf snow futbol futbol"
+    "surf surf surf snow wing   wing"
+    "ola  ola  ola  snow wing   wing";
+}
+.g-surf   { grid-area: surf; }
+.g-snow   { grid-area: snow; }
+.g-futbol { grid-area: futbol; }
+.g-wing   { grid-area: wing; }
+.g-ola    { grid-area: ola; }
+
+.sport-gallery figure {
+  position: relative; overflow: hidden; border-radius: 14px;
+  border: 1px solid var(--border); background: var(--surface-2);
+}
+.sport-gallery img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .5s ease;
+}
+.sport-gallery figure:hover img { transform: scale(1.06); }
+.sport-gallery figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 1.6rem .8rem .6rem;
+  font-size: .78rem; font-weight: 600; color: #fff;
+  background: linear-gradient(transparent, rgba(4,10,18,.85));
+}
+/* El encuadre por defecto centra; estas dos necesitan otro punto de interés. */
+.g-snow img   { object-position: 50% 35%; }
+.g-futbol img { object-position: 50% 40%; }
+
 .sport-list {
   list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: .7rem; margin-top: 1.6rem;
+  gap: .7rem; margin-top: 1.2rem;
 }
 .sport-list li {
   display: flex; align-items: center; gap: .7rem; position: relative;
@@ -369,7 +398,15 @@ footer {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-photo { width: 230px; height: 230px; margin: 0 auto; order: -1; }
   .project, .project.reverse { grid-template-columns: 1fr; }
-  .sport { grid-template-columns: 1fr; }
+  .sport-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+    grid-template-areas:
+      "surf surf"
+      "snow futbol"
+      "snow wing"
+      "ola  ola";
+  }
   .project.reverse .project-media { order: 0; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .nav nav { display: none; }
