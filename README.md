@@ -17,7 +17,7 @@ portfolio-ia/
 │   ├── favicon.svg
 │   ├── pattern.svg          # Fondo de red neuronal del hero
 │   ├── cover-toxiscan.svg   # Portada de ToxiScan
-│   ├── cover-vision.svg
+│   ├── cover-ships.svg      # Portada de ship-vision
 │   └── cover-rag.svg
 └── .nojekyll           # Evita que GitHub Pages procese el sitio con Jekyll
 ```

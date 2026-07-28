@@ -135,20 +135,21 @@
         </div>
       </article>
 
-      <!-- Proyecto 2 -->
+      <!-- Proyecto 2 · ship-vision -->
       <article class="project reverse">
-        <a class="project-media" href="https://github.com/mandyss10" target="_blank" rel="noopener" aria-label="Abrir proyecto de visión por computador en GitHub">
-          <img src="assets/cover-vision.svg" alt="Escena urbana con cajas de detección sobre persona, coche y bicicleta">
-          <span class="media-tag">Computer Vision</span>
+        <a class="project-media" href="https://github.com/mandyss10/ship-vision" target="_blank" rel="noopener" aria-label="Abrir ship-vision en GitHub">
+          <img src="assets/cover-ships.svg" alt="Barco detectado en el mar y diagrama del pipeline de dos etapas con AlexNet y ResNet18">
+          <span class="media-tag">Visión por Computador</span>
         </a>
         <div class="project-body">
-          <h3>Detección de objetos en tiempo real</h3>
-          <p class="project-line"><span class="k">El problema</span> Detectar personas y vehículos en vídeo sin un servidor potente detrás.</p>
-          <p class="project-line"><span class="k">Qué hice</span> Red convolucional afinada sobre un dataset propio y optimización del modelo para inferencia ligera.</p>
-          <p class="project-line"><span class="k">Resultado</span> Detección fluida <strong>en tiempo real</strong> con seguimiento entre fotogramas.</p>
-          <ul class="tags"><li>PyTorch</li><li>OpenCV</li><li>YOLO</li><li>NumPy</li></ul>
+          <h3>ship-vision — detección y clasificación de barcos</h3>
+          <p class="project-line"><span class="k">El problema</span> Decidir dos cosas seguidas sobre una imagen marítima: si aparece un barco y, si lo hay, si está atracado o navegando.</p>
+          <p class="project-line"><span class="k">Qué hice</span> Pipeline en dos etapas con <strong>transfer learning</strong>: AlexNet preentrenado para la detección y ResNet18 para el estado del barco, con data augmentation (flip, rotación, color jitter) y early stopping.</p>
+          <p class="project-line"><span class="k">Resultado</span> <strong>93% de acierto</strong> detectando barcos. La segunda etapa se queda en el 62%: distinguir atracado de navegando depende del contexto del puerto más que del barco, y ese es el margen de mejora que documenté.</p>
+          <ul class="tags"><li>PyTorch</li><li>torchvision</li><li>AlexNet</li><li>ResNet18</li><li>Transfer learning</li></ul>
+          <p class="credit">Práctica de <em>Visión por Computador Avanzada</em> · Grado en IA, UDC. En equipo con Adrián y Sergio.</p>
           <div class="project-links">
-            <a href="https://github.com/mandyss10" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+            <a href="https://github.com/mandyss10/ship-vision" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
               <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
               Ver en GitHub
             </a>
