@@ -13,7 +13,7 @@ portfolio-ia/
 ├── style.css           # Estilos, tema claro/oscuro, responsive
 ├── script.js           # Typewriter, contadores, barras, scroll, tema
 ├── assets/             # Imágenes (SVG propios, sin dependencias externas)
-│   ├── avatar.svg
+│   ├── foto-ivan.jpg        # Foto del hero (recorte circular vía CSS)
 │   ├── favicon.svg
 │   ├── pattern.svg          # Fondo de red neuronal del hero
 │   ├── cover-toxiscan.svg   # Portada de ToxiScan
