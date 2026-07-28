@@ -3,7 +3,7 @@
 Portfolio personal de Ingeniero de Inteligencia Artificial.
 Web estática (HTML + CSS + JS, sin dependencias) publicada gratis con **GitHub Pages**.
 
-🔗 **Demo:** https://USUARIO.github.io/portfolio-ia/
+🔗 **Demo:** https://mandyss10.github.io/portfolio-ia/
 
 ## Estructura
 
@@ -14,8 +14,9 @@ portfolio-ia/
 ├── script.js           # Typewriter, contadores, barras, scroll, tema
 ├── assets/             # Imágenes (SVG propios, sin dependencias externas)
 │   ├── avatar.svg
-│   ├── pattern.svg     # Fondo de red neuronal del hero
-│   ├── cover-bio.svg   # Portada proyecto 1
+│   ├── favicon.svg
+│   ├── pattern.svg          # Fondo de red neuronal del hero
+│   ├── cover-toxiscan.svg   # Portada de ToxiScan
 │   ├── cover-vision.svg
 │   └── cover-rag.svg
 └── .nojekyll           # Evita que GitHub Pages procese el sitio con Jekyll

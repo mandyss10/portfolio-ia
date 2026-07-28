@@ -207,6 +207,12 @@ html[data-theme="light"] .btn-primary { color: #fff; }
 }
 .project-line strong { color: var(--text); }
 .project-links { display: flex; gap: .6rem; margin-top: 1.2rem; flex-wrap: wrap; }
+.credit {
+  margin-top: 1rem; padding-left: .9rem; font-size: .82rem; color: var(--muted);
+  border-left: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.credit a { color: var(--accent); }
+.credit a:hover { text-decoration: underline; }
 
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
 .tags li {
