@@ -68,21 +68,22 @@ img { max-width: 100%; display: block; }
 .nav nav a:hover::after { width: 100%; }
 #theme-toggle {
   background: var(--surface); border: 1px solid var(--border); color: var(--text);
-  border-radius: 999px; width: 38px; height: 38px; cursor: pointer; font-size: 1rem; flex: none;
+  border-radius: 999px; width: 38px; height: 38px; flex: none; cursor: pointer;
+  display: grid; place-items: center; transition: transform .25s, border-color .25s;
 }
-#theme-toggle:hover { border-color: var(--accent); transform: rotate(-15deg); }
+#theme-toggle:hover { border-color: var(--accent); transform: rotate(-18deg); }
 
 /* ══════════ LAYOUT ══════════ */
 main { max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1rem, 5vw, 2rem); }
 .section { padding: clamp(4rem, 10vw, 7rem) 0; }
 .section-head { margin-bottom: 2.8rem; }
-.section-head .num {
-  font-family: ui-monospace, monospace; font-size: .8rem; color: var(--accent);
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-  padding: .15rem .6rem; border-radius: 999px;
-}
 .section-head h2 {
-  font-size: clamp(1.9rem, 5vw, 2.9rem); letter-spacing: -.03em; line-height: 1.1; margin-top: .8rem;
+  font-size: clamp(1.9rem, 5vw, 2.9rem); letter-spacing: -.03em; line-height: 1.1;
+  position: relative; padding-bottom: .6rem;
+}
+.section-head h2::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 62px; height: 3px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
 }
 .section-head .sub { color: var(--muted); margin-top: .5rem; max-width: 60ch; }
 
@@ -126,6 +127,9 @@ html[data-theme="light"] .hero-bg { opacity: .5; }
 html[data-theme="light"] .btn-primary { color: #fff; }
 .btn-ghost { border-color: var(--border); background: var(--surface); color: var(--text); }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -14px color-mix(in srgb, var(--accent) 70%, transparent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .55rem; }
+.ic { width: 18px; height: 18px; flex: none; }
+.btn-sm .ic { width: 16px; height: 16px; }
 
 .hero-photo { position: relative; }
 .hero-photo img { border-radius: 50%; animation: float 6s ease-in-out infinite; }
@@ -166,9 +170,10 @@ html[data-theme="light"] .btn-primary { color: #fff; }
 .pillar:hover { transform: translateY(-6px); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
 .pillar:hover::before { transform: scaleX(1); }
 .pillar-icon {
-  width: 52px; height: 52px; display: grid; place-items: center; font-size: 1.5rem;
+  width: 52px; height: 52px; display: grid; place-items: center; color: var(--accent);
   border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border); margin-bottom: 1rem;
 }
+.pillar-icon svg { width: 26px; height: 26px; }
 .pillar h3 { font-size: 1.15rem; margin-bottom: .5rem; }
 .pillar p { color: var(--muted); font-size: .93rem; }
 .pillar strong { color: var(--text); }
@@ -220,20 +225,13 @@ html[data-theme="light"] .btn-primary { color: #fff; }
   padding: 1.1rem; text-align: center; transition: transform .2s, border-color .2s, background .2s;
 }
 .stack-card:hover { transform: translateY(-5px) scale(1.03); border-color: var(--accent); background: var(--surface-2); }
-.chip {
-  display: grid; place-items: center; width: 44px; height: 44px; margin: 0 auto .6rem;
-  border-radius: 12px; font-weight: 800; font-size: .95rem; color: #fff;
+.logo-box {
+  display: grid; place-items: center; width: 52px; height: 52px; margin: 0 auto .7rem;
+  border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border);
+  transition: background .2s, border-color .2s;
 }
-.chip.py { background: linear-gradient(135deg,#3776ab,#ffd43b); color:#0b1220; }
-.chip.torch { background: linear-gradient(135deg,#ee4c2c,#ff9068); }
-.chip.sk { background: linear-gradient(135deg,#f89939,#3499cd); }
-.chip.pd { background: linear-gradient(135deg,#150458,#e70488); }
-.chip.cv { background: linear-gradient(135deg,#5c3ee8,#2ea3f2); }
-.chip.hf { background: linear-gradient(135deg,#ffd21e,#ff9d00); }
-.chip.api { background: linear-gradient(135deg,#059669,#34d399); }
-.chip.dk { background: linear-gradient(135deg,#2496ed,#7fd0ff); }
-.chip.git { background: linear-gradient(135deg,#f05033,#ff8a65); }
-.chip.sql { background: linear-gradient(135deg,#4479a1,#8ab4d8); }
+.logo-box svg { width: 30px; height: 30px; }
+.stack-card:hover .logo-box { background: var(--bg); border-color: var(--accent); }
 .stack-card h4 { font-size: .95rem; }
 .stack-card small { color: var(--muted); font-size: .78rem; }
 
