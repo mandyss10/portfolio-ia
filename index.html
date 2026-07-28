@@ -1,150 +1,252 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iván Mandayo — Ingeniero de IA</title>
-<meta name="description" content="Portfolio de Iván Mandayo Lagoa, Ingeniero de Inteligencia Artificial. Machine Learning, Deep Learning y MLOps.">
+<meta name="description" content="Portfolio de Iván Mandayo Lagoa, Ingeniero de Inteligencia Artificial. Machine Learning, Visión por Computador y sistemas con LLMs.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 </head>
 <body>
 
+<!-- barra de progreso de lectura -->
+<div id="progress"></div>
+
 <header class="nav">
-  <a href="#" class="logo">iM<span>.</span></a>
+  <a href="#top" class="logo"><span class="logo-badge">iM</span> Iván Mandayo</a>
   <nav>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#proyectos">Proyectos</a>
-    <a href="#skills">Skills</a>
+    <a href="#skills">Stack</a>
+    <a href="#camino">Trayectoria</a>
     <a href="#contacto">Contacto</a>
   </nav>
   <button id="theme-toggle" aria-label="Cambiar tema">🌙</button>
 </header>
 
-<main>
+<main id="top">
 
-  <!-- ================= HERO ================= -->
+  <!-- ══════════════ HERO ══════════════ -->
   <section class="hero">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <p class="eyebrow">Disponible para prácticas y proyectos</p>
-    <h1>Iván Mandayo Lagoa</h1>
-    <h2 class="typed"><span id="typed-text"></span><span class="cursor">|</span></h2>
-    <p class="lead">
-      Ingeniero de Inteligencia Artificial. Construyo sistemas que aprenden de los datos:
-      desde el modelo hasta el despliegue en producción.
-    </p>
-    <div class="cta">
-      <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
-      <a class="btn btn-ghost" href="https://github.com/USUARIO" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </section>
-
-  <!-- ================= SOBRE MÍ ================= -->
-  <section id="sobre-mi" class="section">
-    <h2 class="section-title"><span class="num">01</span> Sobre mí</h2>
-    <div class="about">
-      <div>
-        <p>
-          Estudiante de último curso del <strong>Grado en Inteligencia Artificial</strong>, centrado en
-          machine learning aplicado a problemas reales — visión por computador, procesado de lenguaje
-          natural y modelos predictivos sobre datos biomédicos.
+    <img class="hero-bg" src="assets/pattern.svg" alt="" aria-hidden="true">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot"></span> Disponible para prácticas y proyectos</p>
+        <h1>Convierto <span class="hl">datos</span><br>en <span class="hl">decisiones</span>.</h1>
+        <h2 class="typed"><span id="typed-text"></span><span class="cursor">|</span></h2>
+        <p class="lead">
+          Soy Iván, Ingeniero de Inteligencia Artificial. Diseño y entreno modelos de machine
+          learning, y los llevo hasta producción con APIs y contenedores para que resuelvan
+          problemas reales.
         </p>
-        <p>
-          Me interesa especialmente el punto donde la investigación se convierte en producto: pipelines
-          reproducibles, evaluación honesta de modelos y despliegue con APIs y contenedores.
-        </p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#proyectos">Ver mis proyectos →</a>
+          <a class="btn btn-ghost" href="mailto:ivanmandayo10@gmail.com">Contactar</a>
+        </div>
       </div>
-      <ul class="facts">
-        <li><span>📍</span> Galicia, España</li>
-        <li><span>🎓</span> Grado en Ingeniería de IA</li>
-        <li><span>🐍</span> Python · PyTorch · scikit-learn</li>
-        <li><span>🚀</span> Docker · FastAPI · Git</li>
-      </ul>
+      <figure class="hero-photo">
+        <img src="assets/avatar.svg" alt="Retrato ilustrado de Iván Mandayo">
+        <figcaption class="badge-float">🧠 IA · ML · Visión</figcaption>
+      </figure>
+    </div>
+
+    <!-- métricas -->
+    <ul class="stats">
+      <li><strong data-count="3">0</strong><span>Proyectos destacados</span></li>
+      <li><strong data-count="4">0</strong><span>Años de formación en IA</span></li>
+      <li><strong data-count="15">0</strong><span>Tecnologías dominadas</span></li>
+      <li><strong data-count="100" data-suffix="%">0</strong><span>Ganas de aprender</span></li>
+    </ul>
+  </section>
+
+  <!-- ══════════════ SOBRE MÍ ══════════════ -->
+  <section id="sobre-mi" class="section">
+    <header class="section-head">
+      <span class="num">01</span>
+      <h2>Sobre mí</h2>
+      <p class="sub">Quién soy y qué sé hacer, en tres ideas.</p>
+    </header>
+
+    <div class="pillars">
+      <article class="pillar">
+        <div class="pillar-icon">🎓</div>
+        <h3>Formación</h3>
+        <p>Último curso del <strong>Grado en Ingeniería de Inteligencia Artificial</strong>.
+           Base sólida en matemáticas, algoritmia y aprendizaje automático.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon">🔬</div>
+        <h3>Especialidad</h3>
+        <p>Modelos predictivos sobre <strong>datos biomédicos</strong>, visión por computador
+           y sistemas de preguntas y respuestas con <strong>LLMs</strong>.</p>
+      </article>
+      <article class="pillar">
+        <div class="pillar-icon">🚀</div>
+        <h3>Enfoque</h3>
+        <p>No me quedo en el notebook: <strong>pipelines reproducibles</strong>, evaluación
+           honesta y despliegue con Docker y FastAPI.</p>
+      </article>
     </div>
   </section>
 
-  <!-- ================= PROYECTOS ================= -->
+  <!-- ══════════════ PROYECTOS ══════════════ -->
   <section id="proyectos" class="section">
-    <h2 class="section-title"><span class="num">02</span> Proyectos</h2>
-    <div class="grid">
+    <header class="section-head">
+      <span class="num">02</span>
+      <h2>Proyectos</h2>
+      <p class="sub">Cada tarjeta explica <em>el problema</em>, <em>qué construí</em> y <em>el resultado</em>.</p>
+    </header>
 
-      <article class="card">
-        <div class="card-top">
-          <span class="icon">🧬</span>
-          <div class="links">
-            <a href="#" title="Código">&lt;/&gt;</a>
+    <div class="projects">
+
+      <!-- Proyecto 1 -->
+      <article class="project">
+        <a class="project-media" href="#" aria-label="Abrir proyecto de predicción de cáncer">
+          <img src="assets/cover-bio.svg" alt="Mapa de calor de expresión génica junto a una hélice de ADN">
+          <span class="media-tag">Bioinformática</span>
+        </a>
+        <div class="project-body">
+          <h3>Predicción de cáncer con datos genómicos</h3>
+          <p class="project-line"><span class="k">El problema</span> Miles de genes por paciente y muy pocas muestras: los modelos se sobreajustan.</p>
+          <p class="project-line"><span class="k">Qué hice</span> Pipeline de selección de características + validación cruzada estratificada e interpretabilidad con SHAP.</p>
+          <p class="project-line"><span class="k">Resultado</span> Clasificador estable y, sobre todo, <strong>explicable</strong>: se ve qué genes pesan en cada predicción.</p>
+          <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Pandas</li><li>SHAP</li><li>Jupyter</li></ul>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary">Ver código</a>
+            <a href="#" class="btn btn-sm btn-ghost">Notebook</a>
           </div>
         </div>
-        <h3>Predicción de cáncer con bioinformática</h3>
-        <p>Modelo de clasificación sobre datos de expresión génica. Selección de características,
-           validación cruzada y análisis de interpretabilidad.</p>
-        <ul class="tags"><li>Python</li><li>scikit-learn</li><li>Pandas</li><li>Jupyter</li></ul>
       </article>
 
-      <article class="card">
-        <div class="card-top">
-          <span class="icon">👁️</span>
-          <div class="links"><a href="#" title="Código">&lt;/&gt;</a></div>
+      <!-- Proyecto 2 -->
+      <article class="project reverse">
+        <a class="project-media" href="#" aria-label="Abrir proyecto de visión por computador">
+          <img src="assets/cover-vision.svg" alt="Escena urbana con cajas de detección sobre persona, coche y bicicleta">
+          <span class="media-tag">Computer Vision</span>
+        </a>
+        <div class="project-body">
+          <h3>Detección de objetos en tiempo real</h3>
+          <p class="project-line"><span class="k">El problema</span> Detectar personas y vehículos en vídeo sin un servidor potente detrás.</p>
+          <p class="project-line"><span class="k">Qué hice</span> Red convolucional afinada sobre un dataset propio y optimización del modelo para inferencia ligera.</p>
+          <p class="project-line"><span class="k">Resultado</span> Detección fluida <strong>en tiempo real</strong> con seguimiento entre fotogramas.</p>
+          <ul class="tags"><li>PyTorch</li><li>OpenCV</li><li>YOLO</li><li>NumPy</li></ul>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary">Ver código</a>
+            <a href="#" class="btn btn-sm btn-ghost">Demo</a>
+          </div>
         </div>
-        <h3>Visión por computador en tiempo real</h3>
-        <p>Detección y seguimiento de objetos con redes convolucionales, optimizado para
-           inferencia en dispositivos con recursos limitados.</p>
-        <ul class="tags"><li>PyTorch</li><li>OpenCV</li><li>YOLO</li></ul>
       </article>
 
-      <article class="card">
-        <div class="card-top">
-          <span class="icon">💬</span>
-          <div class="links"><a href="#" title="Código">&lt;/&gt;</a></div>
+      <!-- Proyecto 3 -->
+      <article class="project">
+        <a class="project-media" href="#" aria-label="Abrir proyecto de asistente RAG">
+          <img src="assets/cover-rag.svg" alt="Diagrama de un sistema RAG: documentos, embeddings y respuesta con citas">
+          <span class="media-tag">LLMs · RAG</span>
+        </a>
+        <div class="project-body">
+          <h3>Asistente que responde sobre tus documentos</h3>
+          <p class="project-line"><span class="k">El problema</span> Un modelo de lenguaje solo se inventa respuestas si no conoce tus documentos.</p>
+          <p class="project-line"><span class="k">Qué hice</span> Sistema RAG: troceo de documentos, embeddings, base vectorial y recuperación de los fragmentos más relevantes.</p>
+          <p class="project-line"><span class="k">Resultado</span> Respuestas <strong>con la fuente citada</strong>, servidas por una API en FastAPI.</p>
+          <ul class="tags"><li>LLMs</li><li>RAG</li><li>Embeddings</li><li>FastAPI</li><li>Docker</li></ul>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-primary">Ver código</a>
+            <a href="#" class="btn btn-sm btn-ghost">Demo</a>
+          </div>
         </div>
-        <h3>Asistente RAG sobre documentos</h3>
-        <p>Sistema de preguntas y respuestas con recuperación semántica: embeddings, base de datos
-           vectorial y respuestas citadas con la fuente.</p>
-        <ul class="tags"><li>LLMs</li><li>RAG</li><li>FastAPI</li><li>Vector DB</li></ul>
       </article>
 
     </div>
-    <p class="hint">✍️ Edita estas tarjetas en <code>index.html</code> con tus proyectos reales y sus enlaces.</p>
+    <p class="hint">✍️ Sustituye los textos y los <code>href="#"</code> en <code>index.html</code>. Para poner una captura real: guarda tu imagen en <code>assets/</code> y cambia el <code>src</code>.</p>
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- ══════════════ STACK ══════════════ -->
   <section id="skills" class="section">
-    <h2 class="section-title"><span class="num">03</span> Stack técnico</h2>
-    <div class="skills">
-      <div class="skill-group">
-        <h4>Lenguajes</h4>
-        <ul class="tags"><li>Python</li><li>SQL</li><li>C++</li><li>JavaScript</li></ul>
-      </div>
-      <div class="skill-group">
-        <h4>IA / ML</h4>
-        <ul class="tags"><li>PyTorch</li><li>TensorFlow</li><li>scikit-learn</li><li>Hugging Face</li><li>OpenCV</li></ul>
-      </div>
-      <div class="skill-group">
-        <h4>Datos</h4>
-        <ul class="tags"><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Jupyter</li></ul>
-      </div>
-      <div class="skill-group">
-        <h4>Ingeniería</h4>
-        <ul class="tags"><li>Git</li><li>Docker</li><li>FastAPI</li><li>Linux</li></ul>
-      </div>
+    <header class="section-head">
+      <span class="num">03</span>
+      <h2>Stack técnico</h2>
+      <p class="sub">Las herramientas con las que trabajo cada día.</p>
+    </header>
+
+    <div class="stack">
+      <div class="stack-card"><span class="chip py">Py</span><h4>Python</h4><small>Lenguaje principal</small></div>
+      <div class="stack-card"><span class="chip torch">🔥</span><h4>PyTorch</h4><small>Deep learning</small></div>
+      <div class="stack-card"><span class="chip sk">sk</span><h4>scikit-learn</h4><small>ML clásico</small></div>
+      <div class="stack-card"><span class="chip pd">pd</span><h4>Pandas</h4><small>Datos tabulares</small></div>
+      <div class="stack-card"><span class="chip cv">👁</span><h4>OpenCV</h4><small>Visión</small></div>
+      <div class="stack-card"><span class="chip hf">🤗</span><h4>Hugging Face</h4><small>LLMs y NLP</small></div>
+      <div class="stack-card"><span class="chip api">⚡</span><h4>FastAPI</h4><small>Servir modelos</small></div>
+      <div class="stack-card"><span class="chip dk">🐳</span><h4>Docker</h4><small>Contenedores</small></div>
+      <div class="stack-card"><span class="chip git">⎇</span><h4>Git</h4><small>Control de versiones</small></div>
+      <div class="stack-card"><span class="chip sql">DB</span><h4>SQL</h4><small>Bases de datos</small></div>
+    </div>
+
+    <!-- barras de nivel -->
+    <div class="levels">
+      <div class="level"><span>Machine Learning</span><div class="bar"><i data-level="90"></i></div></div>
+      <div class="level"><span>Deep Learning / Visión</span><div class="bar"><i data-level="82"></i></div></div>
+      <div class="level"><span>NLP y LLMs</span><div class="bar"><i data-level="75"></i></div></div>
+      <div class="level"><span>MLOps / Despliegue</span><div class="bar"><i data-level="70"></i></div></div>
     </div>
   </section>
 
-  <!-- ================= CONTACTO ================= -->
+  <!-- ══════════════ TRAYECTORIA ══════════════ -->
+  <section id="camino" class="section">
+    <header class="section-head">
+      <span class="num">04</span>
+      <h2>Trayectoria</h2>
+      <p class="sub">De los fundamentos a los sistemas en producción.</p>
+    </header>
+
+    <ol class="timeline">
+      <li>
+        <span class="tl-dot"></span>
+        <span class="tl-date">Fundamentos</span>
+        <h3>Matemáticas y programación</h3>
+        <p>Álgebra lineal, probabilidad, algoritmia y estructuras de datos: la base que hace que un modelo se entienda y no sea una caja negra.</p>
+      </li>
+      <li>
+        <span class="tl-dot"></span>
+        <span class="tl-date">Machine Learning</span>
+        <h3>Modelos y evaluación</h3>
+        <p>Regresión, árboles, ensembles y clustering. Aprendí lo más importante: <strong>evaluar bien</strong> antes de presumir de métricas.</p>
+      </li>
+      <li>
+        <span class="tl-dot"></span>
+        <span class="tl-date">Deep Learning</span>
+        <h3>Redes neuronales</h3>
+        <p>Convolucionales para imagen y transformers para texto. Proyectos de visión por computador y NLP con PyTorch.</p>
+      </li>
+      <li class="current">
+        <span class="tl-dot"></span>
+        <span class="tl-date">Ahora</span>
+        <h3>IA en producción</h3>
+        <p>Sistemas RAG, APIs con FastAPI, contenedores y despliegue. Buscando prácticas donde aportar en proyectos reales.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ══════════════ CONTACTO ══════════════ -->
   <section id="contacto" class="section contact">
-    <h2 class="section-title"><span class="num">04</span> Contacto</h2>
-    <p class="lead">¿Tienes un proyecto de IA o una oferta? Escríbeme.</p>
-    <div class="cta">
-      <a class="btn btn-primary" href="mailto:ivanmandayo10@gmail.com">ivanmandayo10@gmail.com</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/USUARIO" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="contact-box">
+      <h2>¿Hablamos?</h2>
+      <p class="lead">Estoy abierto a prácticas, colaboraciones y proyectos de IA. Respondo rápido.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:ivanmandayo10@gmail.com">✉️ ivanmandayo10@gmail.com</a>
+        <a class="btn btn-ghost" href="https://github.com/USUARIO" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/USUARIO" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <p>© <span id="year"></span> Iván Mandayo Lagoa — hecho con HTML, CSS y café ☕</p>
+  <p>© <span id="year"></span> Iván Mandayo Lagoa · Hecho con HTML, CSS y JavaScript · Alojado en GitHub Pages</p>
 </footer>
+
+<a href="#top" id="to-top" aria-label="Volver arriba">↑</a>
 
 <script src="script.js"></script>
 </body>

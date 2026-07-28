@@ -9,18 +9,27 @@ Web estática (HTML + CSS + JS, sin dependencias) publicada gratis con **GitHub 
 
 ```
 portfolio-ia/
-├── index.html    # Contenido: hero, sobre mí, proyectos, skills, contacto
-├── style.css     # Estilos, tema claro/oscuro, responsive
-├── script.js     # Typewriter, toggle de tema, animaciones al scroll
-└── .nojekyll     # Evita que GitHub Pages procese el sitio con Jekyll
+├── index.html          # Hero, sobre mí, proyectos, stack, trayectoria, contacto
+├── style.css           # Estilos, tema claro/oscuro, responsive
+├── script.js           # Typewriter, contadores, barras, scroll, tema
+├── assets/             # Imágenes (SVG propios, sin dependencias externas)
+│   ├── avatar.svg
+│   ├── pattern.svg     # Fondo de red neuronal del hero
+│   ├── cover-bio.svg   # Portada proyecto 1
+│   ├── cover-vision.svg
+│   └── cover-rag.svg
+└── .nojekyll           # Evita que GitHub Pages procese el sitio con Jekyll
 ```
 
 ## Cómo editarlo
 
-- **Añadir un proyecto:** copia un bloque `<article class="card">` en `index.html`
-  y cambia título, descripción, tags y el enlace al repo.
-- **Cambiar colores:** variables `--accent` y `--accent-2` al principio de `style.css`.
-- **Cambiar los roles del texto animado:** array `roles` en `script.js`.
+- **Añadir un proyecto:** copia un bloque `<article class="project">` en `index.html`.
+  Alterna la clase `reverse` para que la imagen cambie de lado.
+- **Poner una captura real:** guarda tu `.png`/`.jpg` en `assets/` y cambia el `src`
+  del `<img>` de esa tarjeta.
+- **Cambiar colores:** variables `--accent`, `--accent-2` y `--accent-3` al principio de `style.css`.
+- **Cambiar los roles animados:** array `roles` en `script.js`.
+- **Cambiar métricas y niveles:** atributos `data-count` y `data-level` en `index.html`.
 
 ## Ver en local
 
