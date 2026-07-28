@@ -60,7 +60,7 @@
 
     <!-- métricas -->
     <ul class="stats">
-      <li><strong data-count="3">0</strong><span>Proyectos destacados</span></li>
+      <li><strong data-count="4">0</strong><span>Proyectos destacados</span></li>
       <li><strong data-count="4">0</strong><span>Años de formación en IA</span></li>
       <li><strong data-count="10">0</strong><span>Tecnologías dominadas</span></li>
       <li><strong data-count="100" data-suffix="%">0</strong><span>Ganas de aprender</span></li>
@@ -159,24 +159,41 @@
         </div>
       </article>
 
-      <!-- Proyecto 3 -->
+      <!-- Proyecto 3 · Buscador semántico -->
       <article class="project">
-        <a class="project-media" href="https://github.com/mandyss10" target="_blank" rel="noopener" aria-label="Abrir proyecto de asistente RAG en GitHub">
-          <img src="assets/cover-rag.svg" alt="Diagrama de un sistema RAG: documentos, embeddings y respuesta con citas">
-          <span class="media-tag">LLMs · RAG</span>
+        <a class="project-media" href="https://mandyss10.github.io/buscador-apuntes/" target="_blank" rel="noopener" aria-label="Probar el buscador semántico de apuntes">
+          <img src="assets/cover-buscador.svg" alt="Barra de búsqueda con una pregunta en lenguaje natural y los fragmentos de apuntes recuperados, ordenados por relevancia">
+          <span class="media-tag">NLP · Embeddings</span>
         </a>
         <div class="project-body">
-          <h3>Asistente que responde sobre tus documentos</h3>
-          <p class="project-line"><span class="k">El problema</span> Un modelo de lenguaje solo se inventa respuestas si no conoce tus documentos.</p>
-          <p class="project-line"><span class="k">Qué hice</span> Sistema RAG: troceo de documentos, embeddings, base vectorial y recuperación de los fragmentos más relevantes.</p>
-          <p class="project-line"><span class="k">Resultado</span> Respuestas <strong>con la fuente citada</strong>, servidas por una API en FastAPI.</p>
-          <ul class="tags"><li>LLMs</li><li>RAG</li><li>Embeddings</li><li>FastAPI</li><li>Docker</li></ul>
+          <h3>Buscador semántico de apuntes</h3>
+          <p class="project-line"><span class="k">El problema</span> Buscar en apuntes con Ctrl+F solo encuentra la palabra exacta. Si no recuerdas el término técnico, no encuentras nada.</p>
+          <p class="project-line"><span class="k">Qué hice</span> Buscador por significado: extrae el texto de los PDF, los trocea con solapamiento, genera embeddings con un modelo multilingüe y los ordena por similitud coseno. El modelo se ejecuta <strong>dentro del navegador</strong> con Transformers.js, así que no hay backend y ningún documento sale del ordenador.</p>
+          <p class="project-line"><span class="k">Resultado</span> Preguntas <em>"¿cómo evito que el modelo memorice los datos?"</em> y te devuelve el apartado sobre <strong>sobreajuste</strong>, aunque no compartan ni una palabra. Índice persistido en IndexedDB y búsqueda en milisegundos.</p>
+          <ul class="tags"><li>Transformers.js</li><li>Embeddings</li><li>PDF.js</li><li>IndexedDB</li><li>JavaScript</li></ul>
           <div class="project-links">
-            <a href="https://github.com/mandyss10" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+            <a href="https://github.com/mandyss10/buscador-apuntes" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
               <svg class="ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.2 1.9 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
               Ver en GitHub
             </a>
+            <a href="https://mandyss10.github.io/buscador-apuntes/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Probar la demo</a>
           </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 4 · Prácticas en empresa -->
+      <article class="project reverse">
+        <div class="project-media static">
+          <img src="assets/cover-rag.svg" alt="Diagrama de un sistema RAG: documentos, embeddings y respuesta con la fuente citada">
+          <span class="media-tag">LLMs · RAG</span>
+        </div>
+        <div class="project-body">
+          <h3>Pipeline RAG sobre documentación corporativa</h3>
+          <p class="project-line"><span class="k">El contexto</span> Prácticas en empresa en <strong>Merlin Software</strong>, dentro del Grado en IA.</p>
+          <p class="project-line"><span class="k">Qué hice</span> Pipeline de recuperación aumentada: procesado y troceado de documentos, generación de embeddings, indexado en una base vectorial (ChromaDB) y recuperación de los fragmentos relevantes. Añadí procesamiento en paralelo para acelerar la ingesta y expuse el sistema como API contenerizada con Docker.</p>
+          <p class="project-line"><span class="k">Resultado</span> Servicio funcionando de extremo a extremo y consumible desde otras aplicaciones de la empresa. Primera experiencia trabajando con <strong>Git en equipo</strong>: ramas por funcionalidad, revisiones e integración continua sobre <code>develop</code>.</p>
+          <ul class="tags"><li>Python</li><li>RAG</li><li>ChromaDB</li><li>Embeddings</li><li>Docker</li><li>Git</li></ul>
+          <p class="credit private">Código privado: proyecto interno sujeto a acuerdo de confidencialidad. Encantado de comentar la arquitectura y las decisiones técnicas en una entrevista.</p>
         </div>
       </article>
 

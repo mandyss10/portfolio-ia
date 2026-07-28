@@ -233,6 +233,12 @@ html[data-theme="light"] .btn-primary { color: #fff; }
 }
 .credit a { color: var(--accent); }
 .credit a:hover { text-decoration: underline; }
+.credit.private { border-left-color: var(--accent-3); margin-top: 1.2rem; }
+.credit.private::before {
+  content: "🔒"; margin-right: .4rem; filter: grayscale(1) opacity(.7);
+}
+.project-media.static { cursor: default; }
+.project-media.static:hover img { transform: none; }
 
 .tags { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
 .tags li {
