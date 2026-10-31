@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -52,6 +52,41 @@
   <section id="trabajo" class="work">
     <div class="wrap">
       <h2 class="title">Cosas que he<br>construido</h2>
+
+      <!-- TFG: confidencial. Solo método y cifras medidas con datos públicos. -->
+      <article class="card card-sea">
+        <div class="card-head">
+          <p class="card-ctx">Trabajo de Fin de Grado · UDC · en curso</p>
+          <h3>Sistema inteligente de evidencia médica</h3>
+          <p class="card-sum">Entiende la pregunta en español, lee artículos en inglés y te señala dónde está la respuesta. No inventa: cita.</p>
+        </div>
+
+        <div class="card-cols">
+          <div>
+            <ol class="flow">
+              <li>pregunta</li>
+              <li>traducción <em>local</em></li>
+              <li>búsqueda <em>híbrida</em></li>
+              <li>reordenador</li>
+              <li>pasaje citado</li>
+            </ol>
+            <figure class="trace">
+              <p class="trace-q">¿Qué tiene un papel clave en la transmisión maternofetal del VIH-1 y qué aumenta el riesgo?</p>
+              <p class="trace-a">These results suggest that <mark>DC-SIGNR plays a crucial role in MTCT of HIV-1 and that impaired placental DC-SIGNR expression increases risk of transmission.</mark></p>
+              <figcaption>Salida real del sistema con un artículo público de COVID-QA.</figcaption>
+            </figure>
+            <p>Un LLM redactando encima de los resultados tapaba que muchos pasajes eran malos. Al quitarlo
+              se vio el fallo, y lo arreglé donde estaba: en la búsqueda. Corre entero en local y en CPU.</p>
+            <p class="private">Proyecto confidencial, sin código público. Cifras de benchmarks con datos públicos.</p>
+          </div>
+          <div class="stats">
+            <p><strong>88%</strong> encuentra la respuesta en 6 pasajes</p>
+            <p><strong>+10</strong> puntos con el reordenador</p>
+            <p><strong>0</strong> datos fuera del equipo</p>
+            <p class="stack">Python · FastAPI · SQLite · embeddings · BM25 · cross-encoder · React</p>
+          </div>
+        </div>
+      </article>
 
       <!-- Balidea · ASR -->
       <article class="card card-ink">

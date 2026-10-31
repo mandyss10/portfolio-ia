@@ -298,3 +298,18 @@ footer a { text-underline-offset: .2em; }
   html { scroll-behavior: auto; }
   .box { transition: opacity .2s; }
 }
+
+/* ─────────── TRAZA DEL SISTEMA (tarjeta del TFG) ─────────── */
+.trace {
+  background: var(--sea-deep); border-radius: 16px;
+  padding: clamp(1rem, 2.5vw, 1.5rem); margin-bottom: 1.4rem;
+}
+.trace-q { font-weight: 600; color: var(--sea-text); }
+.trace-q::before { content: "→ "; color: var(--orange); }
+.trace .trace-a { margin-top: 1rem; font-size: 1.05rem; line-height: 1.8; }
+.trace mark {
+  position: relative; background: none; color: inherit;
+  padding: .1em .15em; outline: 1.5px solid var(--orange);
+  box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.trace figcaption { margin-top: 1rem; font-size: .8rem; color: var(--sea-text); }
